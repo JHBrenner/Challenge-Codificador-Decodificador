@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Codificador</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img class="logo-img" src="img/Vector.svg" alt="logo de la página">
+        </div>
+
+        <div class="left">  
+            <textarea id="input-texto" class="text-input" placeholder="Ingrese el texto aquí"></textarea>
+        </div>
+
+        <div class="right">
+            <img id="muñeco" src="img/Muñeco.svg" alt="Persona examinando diamante con una lupa">
+            <h2 id="texto-encontrado">Ningún mensaje fue encontrado</h2>
+            <textarea id="texto-ingresado" class="ingresado-texto">Ingresa el texto que desees encriptar o desencriptar</textarea>
+            <textarea id="texto-ingresado-oculto"></textarea>
+            <button id="copiar" type="button" name="button" onclick="copiar()">Copiar</button>
+        </div>
+
+        <section class="left-button">
+            <div class="advertencia">
+                <img id="exclamation" src="img/exclamation.svg" alt="signo de exclamación"><p>Sólo letras minúsculas y sin acentos</p>
+            </div>
+            <div>
+                <button id="btn-encriptar" type="button" onclick="codificar()">Encriptar</button>
+                <button id="btn-desencriptar" type="button" onclick="decodificar()">Desencriptar</button>
+            </div>
+        </section>
+ 
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/christian-arias-developer/" target="_blank"><img class="LinkedIn" src="img/LinkedIn.png" alt="contacto LinkedIn" ></a>
+        <p>Christian Alan Arias Mérida</p>
+        <p>&copy; Copyright J.H.Brenner -2022 - Todos los derechos reservados</p>
+    </footer>
+   
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+
+</html>

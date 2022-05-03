@@ -1,0 +1,223 @@
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+input{
+    font-family: 'Inter', sans-serif;
+}
+
+textarea{
+    font-family: 'Inter', sans-serif;
+}
+
+button{
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    position: relative;
+    width: 75%;
+    
+}
+
+/*LOGO*/
+
+.logo{
+    width: 3%;
+    display: inline-flex;
+    position: absolute;
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.logo-img{
+    margin: 1% 0 0 5%;
+    width: 60%;
+    float: inherit;
+}
+
+.tittle{
+    float: inherit;
+    margin: 0 0 0 5%;
+}
+
+/*LADO IZQUIERDO*/
+
+.left{
+    float: left;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+}
+
+.text-input{
+    float: left;
+    margin: 22% 0 0 16%;
+    width: 80%;
+    height: 80%;
+    color: #0A3871;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: #E5E5E5;
+}
+
+#input-texto{
+    color: #0A3871;
+    width: 50%;
+    height: 60%;
+    padding: 1%;
+    font-size: 15px;
+    resize: none;
+    position: absolute;
+}
+
+#input-texto::placeholder{
+    font-size: 25px;
+    color:#0A3871;
+}
+
+/*LADO DERECHO*/
+
+.right{
+    float: right;
+    width: 25%;
+    height: 70%;
+    border-radius: 24px;
+    background: #FFF;
+    display: inline-flexbox;
+    margin: 25px 25px;
+    padding: 10px;
+    position: relative;
+}
+
+#muñeco{
+    margin: 40% 8% 1%;
+    width: 85%;
+    height: auto;
+    position: static;
+}
+
+#texto-encontrado{
+    margin-left: 7%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#texto-ingresado{
+    float: left;
+    margin: 0 5% 5%;
+    padding: 5px 0 0 0; 
+    width: 90%;
+    height: 140px;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    font-size: 12px;
+    text-align: center;
+    background: #FFF;
+    resize: none;
+}
+
+#texto-ingresado-oculto{
+    float: left;
+    margin: 0 5% 5%;
+    padding: 5px 0 0 0; 
+    width: 90%;
+    height: 530px;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    font-size: 12px;
+    text-align: center;
+    background: #FFF;
+    resize: none;
+    white-space:initial;
+    display: none;
+}
+
+#copiar{
+    margin: 0 20% 0;
+    padding: 15px;
+    width: 60%;
+    height: 10%;
+    background: #FFF;
+    border-radius: 17px;
+    border-color: #0A3871;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    display: none;
+}
+
+/*BOTONES IZQUIERDOS*/
+
+.left-button{
+    float: left;
+    width: 75%;
+    border-radius: 24px;
+    position: absolute;
+    margin-top: 45%;
+    margin-left: 6%;
+}
+
+.advertencia p{
+    font-size: 12px;
+    height: 20px;
+}
+
+#exclamation{
+    float: left;
+    margin: 0 10px 4px;
+}
+
+#btn-encriptar{
+    padding: 15px;
+    width: 25%;
+    border-radius: 17px;
+    margin-left: 1%;
+    background: #0A3871;
+    color: #FFF;
+    border-color: #0A3871;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#btn-desencriptar{
+    padding: 15px;
+    width: 25%;
+    border-radius: 17px;
+    margin-left: 1%;
+    background: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/*PIE DE PAGINA*/
+
+footer{
+    margin-top: 11%;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer .LinkedIn{
+    width: 2%;
+}
+
+footer p{
+    margin:0;
+    font-size: 12px;
+}
