@@ -136,7 +136,7 @@ function codificar()
     
     function copiar()
     {
-        let textoCopiar = document.querySelector("#texto-ingresado");
+        let textoCopiar = document.querySelector("#texto-ingresado-oculto");
         textoCopiar.select();
         document.execCommand("copy");
     }
