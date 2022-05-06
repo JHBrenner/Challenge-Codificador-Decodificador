@@ -3,9 +3,6 @@ body{
     margin: 0;
     padding: 0;
     background: #E5E5E5;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 input{
@@ -21,63 +18,67 @@ button{
 }
 
 .container{
-    margin: 0 auto;
-    position: relative;
-    width: 75%;
-    
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(#E5E5E5, #6483aa) ;
 }
 
 /*LOGO*/
 
 .logo{
     width: 3%;
-    display: inline-flex;
     position: absolute;
-    float: left;
-    margin-top: 2%;
-    margin-left: 2%;
+    margin:0;
+    top: 4%;
+    left:4%;
 }
 
 .logo-img{
-    margin: 1% 0 0 5%;
-    width: 60%;
-    float: inherit;
+    transition:100ms;
+    width: 50%;
+    transition: 100ms;
+    filter:drop-shadow(0px 4px 0px #8c8c8c )
 }
 
-.tittle{
-    float: inherit;
-    margin: 0 0 0 5%;
+.logo:active{
+    transform: translateY(4px);
+    filter:invert(60%);
 }
 
 /*LADO IZQUIERDO*/
 
 .left{
-    float: left;
-    width: 70%;
-    height: 70%;
+    top:20%;
+    left: 11%;
+    width: 50%;
+    height: 50%;
     position: absolute;
 }
 
 .text-input{
-    float: left;
-    margin: 22% 0 0 16%;
-    width: 80%;
-    height: 80%;
+    width: 96%;
+    height: 90%;
+    margin: 1%;
     color: #0A3871;
     font-size: 20px;
     border: none;
     outline: none;
-    background: #E5E5E5;
+    background: inherit;
 }
+
+.text-input:focus::-webkit-input-placeholder {
+    transition: text-indent 500ms 500ms ease; 
+    text-indent: -100%;
+    opacity: 1;
+  }
 
 #input-texto{
     color: #0A3871;
-    width: 50%;
-    height: 60%;
     padding: 1%;
     font-size: 15px;
     resize: none;
-    position: absolute;
 }
 
 #input-texto::placeholder{
@@ -85,134 +86,59 @@ button{
     color:#0A3871;
 }
 
-/*LADO DERECHO*/
-
-.right{
-    float: right;
-    width: 25%;
-    height: 70%;
-    border-radius: 24px;
-    background: #FFF;
-    display: inline-flexbox;
-    margin: 25px 25px;
-    padding: 10px;
-    position: relative;
-    transition: 500ms;
-    box-shadow: 2px 2px 10px 5px #0A3871;
-}
-
-.right:hover{
-    width: 25.5%;
-    height: 70.5%;
-    opacity: 90%;
-     
-}
-
-#muñeco{
-    margin: 40% 8% 1%;
-    width: 85%;
-    height: auto;
-    position: static;
-}
-
-#texto-encontrado{
-    margin-left: 7%;
-    margin-right: 5%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-#texto-ingresado{
-    float: left;
-    margin: 0 5% 5%;
-    padding: 5px 0 0 0; 
-    width: 90%;
-    height: 140px;
-    border: none;
-    outline: none;
-    color: #0A3871;
-    font-size: 12px;
-    text-align: center;
-    background: #FFF;
-    resize: none;
-}
-
-#texto-ingresado-oculto{
-    float: left;
-    margin: 0 5% 5%;
-    padding: 5px 0 0 0; 
-    width: 90%;
-    height: 490px;
-    border: none;
-    outline: none;
-    color: #0A3871;
-    font-size: 12px;
-    text-align: center;
-    background: #FFF;
-    resize: none;
-    white-space:initial;
-    display: none;
-}
-
-#copiar{
-    margin: 0 20% 1%;
-    padding: 15px;
-    width: 60%;
-    height: 10%;
-    background: #FFF;
-    border-radius: 17px;
-    border-color: #0A3871;
-    border-style: solid;
-    border-width: 1px;
-    position: relative;
-    display: none;
-    transition: 100ms;
-    box-shadow: 0 6px 0 #b6b6b6;
-}
-
-#copiar:hover{
-    cursor: pointer;
-}
-
-#copiar:active{
-    transform: translateY(6px);
-    box-shadow: 0 0 0;
-}
-
 /*BOTONES IZQUIERDOS*/
 
-.left-button{
-    float: left;
-    width: 75%;
+.left-buttons{
+    top: 80%;
+    left: 10%;
+    margin: 1% 0;
+    width: 60%;
+    height: 13%;
     border-radius: 24px;
-    position: absolute;
-    margin-top: 45%;
-    margin-left: 6%;
-}
-
-.advertencia p{
-    font-size: 12px;
-    height: 20px;
+    position:absolute;
+    display: block;
 }
 
 #exclamation{
-    float: left;
-    margin: 0 10px 4px;
+    left: 40%;
+    margin-right: 1%;
+    margin-left:2%;
+    margin-bottom:1%;
+}
+
+.advertencia p{
+    font-size: 75%;
+    font-weight: bold;
+    width:50%;
+    height: 17%;
+    margin: 0 0;
+    position: absolute;
+    display:inline-block;
+}
+
+.botones{
+    top:30%;
+    left:0.1%;
+    width: 80%;
+    height: 50%;
+    margin: 0;
+    position: absolute;
+    display: inline-block;
 }
 
 #btn-encriptar{
+    top: 97%;
     padding: 15px;
-    width: 25%;
-    border-radius: 17px;
+    width: 40%;
     margin-left: 1%;
     background: #0A3871;
     color: #FFF;
+    border-radius: 17px;
     border-color: #0A3871;
     border-style: solid;
     border-width: 1px;
     transition: 100ms;
-    box-shadow: 0 7px 0 #000000;
+    box-shadow: 0 6px 0 #626c77;
 }
 
 #btn-encriptar:hover{
@@ -220,17 +146,18 @@ button{
 }
 
 #btn-encriptar:active{
-    transform: translateY(7px);
+    transform: translateY(6px);
     box-shadow: 0 0 0;
 }
 
 #btn-desencriptar{
+    top:90%;
     padding: 15px;
-    width: 25%;
-    border-radius: 17px;
-    margin-left: 1%;
+    width: 40%;
+    margin-left: 2%;
     background: #D8DFE8;
     color: #0A3871;
+    border-radius: 17px;
     border-color: #0A3871;
     border-style: solid;
     border-width: 1px;
@@ -247,25 +174,127 @@ button{
     box-shadow: 0 0 0;
 }
 
+/*LADO DERECHO*/
+
+.right{
+    width: 18%;
+    height: 90%;
+    margin: 2%;
+    padding: 0;
+    border-radius: 24px;
+    left: 70%;
+    position: absolute;
+    background: #FFF;
+    transition: 500ms;
+    box-shadow: 2px 2px 10px 5px #0A3871;
+}
+
+.right:hover{
+    width:19%;
+    height: 91%;
+    padding-left: 0.5%
+}
+
+.mover-3elementos{
+    top:24%;
+    display: block;
+    position: absolute;
+}
+
+#muñeco{
+    margin: 5% 6%;
+    width: 88%;
+}
+
+#texto-encontrado{
+    width: 88%;
+    margin: 5% 6%;
+    text-align: center;
+    font-size: 98%;
+    font-weight:bolder;
+}
+
+#texto-ingresado{
+    margin: 5% 6%;
+    padding: 0; 
+    width: 88%;
+    height: 20%;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    font-size: 74%;
+    font-weight: bold;
+    text-align: center;
+    background: #FFF;
+    resize: none;
+}
+
+#texto-ingresado-oculto{
+    margin: 4% 4%;
+    padding: 0; 
+    width: 90%;
+    height: 85%;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    font-size: 74%;
+    text-align: center;
+    background: #FFF;
+    resize: none;
+    display: none;
+    position: absolute;
+}
+
+#copiar{
+    top: 90%;
+    margin: 0 14%;
+    padding: 0;
+    width: 70%;
+    height: 6%;
+    background: #FFF;
+    border-radius: 15px;
+    border-color: #0A3871;
+    border-style: solid;
+    border-width: 1px;
+    position:absolute;
+    display: none;
+    transition: 100ms;
+    box-shadow: 0 6px 0 #b6b6b6;
+}
+
+#copiar:hover{
+    cursor: pointer;
+}
+
+#copiar:active{
+    transform: translateY(6px);
+    box-shadow: 0 0 0;
+}
+
 /*PIE DE PAGINA*/
 
 footer{
-    margin-top: 11%;
-    margin-bottom: 0;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    padding-top: 2.5%;
+    position: absolute;
     text-align: center;
+    background: linear-gradient(#6483aa, #386ba9 ) ;
 }
 
 footer .LinkedIn{
-    width: 1.5%;
+    width: 1.2%;
 }
 
 footer .GitHub{
-    width: 1.5%;
+    width: 1.2%;
 }
 
 footer p{
     margin:0;
     font-size: 12px;
+    font-weight:600;
 }
 
 
@@ -278,9 +307,6 @@ footer p{
         margin: 0;
         padding: 0;
         background: #E5E5E5;
-        display: grid;
-        min-height: 100vh;
-        grid-template-rows: auto 1fr auto;
     }
     
     input{
@@ -294,55 +320,69 @@ footer p{
     button{
         font-family: 'Inter', sans-serif;
     }
-
+    
     .container{
         margin: 0;
+        position: absolute;
         width: 100%;
-        height: 820px;
+        height: 90%;
+        background: linear-gradient(#E5E5E5, #6483aa);
     }
     
     /*LOGO*/
     
     .logo{
-        width: 10%;
-        display: inline-block;
+        width: 8%;
         position: absolute;
-        margin: 0;
+        margin:0;
+        top: 4%;
+        left:4%;
     }
     
     .logo-img{
-        margin: 10px 0 0 10px;
-        width: 20px;
-        float: inherit;
+        transition:100ms;
+        width: 50%;
+        transition: 100ms;
+        filter:drop-shadow(0px 4px 0px #8c8c8c )
+    }
+    
+    .logo:active{
+        transform: translateY(4px);
+        filter:invert(60%);
     }
     
     /*LADO IZQUIERDO*/
     
     .left{
-        width: 100%;
-        height: 50%;
+        top:10%;
+        left: 11%;
+        width: 80%;
+        height: 35%;
         position: absolute;
     }
     
     .text-input{
-        margin: 22% 4% 0;
-        width: 100%;
-        height: 80%;
+        width: 96%;
+        height: 90%;
+        margin: 1%;
         color: #0A3871;
         font-size: 20px;
         border: none;
         outline: none;
-        background: #E5E5E5;
+        background: inherit;
     }
+    
+    .text-input:focus::-webkit-input-placeholder {
+        transition: text-indent 500ms 500ms ease; 
+        text-indent: -100%;
+        opacity: 1;
+      }
     
     #input-texto{
         color: #0A3871;
-        width: 90%;
-        height: 60%;
         padding: 1%;
         font-size: 15px;
         resize: none;
-        position: absolute;
     }
     
     #input-texto::placeholder{
@@ -350,147 +390,74 @@ footer p{
         color:#0A3871;
     }
     
-    /*LADO DERECHO*/
+    /*BOTONES IZQUIERDOS*/
     
-    .right{
-        width: 90%;
-        padding: 10px;
-        position: absolute;
-        display: inline-flexbox;
-        margin: 430px 8px 40px;
-        height: 30%;
+    .left-buttons{
+        top: 45%;
+        left: 10%;
+        margin: 1% 0;
+        width: 80%;
+        height: 12%;
         border-radius: 24px;
-        background: #FFF;
-        transition: 500ms;
-        box-shadow: 1px 1px 5px 5px #0A3871;
+        position:absolute;
+        display: inline;
     }
     
-    #muñeco{
-        display: none;
-        width:0;
+    #exclamation{
+        left: 40%;
+        margin-right: 1%;
+        margin-left:2%;
+        margin-bottom:1%;
     }
     
-    #texto-encontrado{
-        margin-left: 7%;
-        margin-right: 5%;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
+    .advertencia p{
+        font-size: 75%;
+        font-weight: 100;
+        width:85%;
+        height: 17%;
+        margin: 0 0;
+        position: absolute;
+        display:inline-block;
     }
     
-    #texto-ingresado{
-        float: left;
-        margin: 0 5% 5%;
-        padding: 5px 0 0 0; 
-        width: 90%;
-        height: 140px;
-        border: none;
-        outline: none;
-        color: #0A3871;
-        font-size: 12px;
-        text-align: center;
-        background: #FFF;
-        resize: none;
+    .botones{
+        top:30%;
+        left:0.1%;
+        width: 100%;
+        height: 60%;
+        margin: 0;
+        position: absolute;
+        display: inline-block;
     }
     
-    #texto-ingresado-oculto{
-        float: left;
-        margin: 0 5% 5%;
-        padding: 5px 0 0 0; 
-        width: 90%;
-        height: 490px;
-        border: none;
-        outline: none;
-        color: #0A3871;
-        font-size: 12px;
-        text-align: center;
-        background: #FFF;
-        resize: none;
-        white-space:initial;
-        display: none;
-    }
-    
-    #copiar{
-        margin: 0 20% 1%;
+    #btn-encriptar{
+        top: 97%;
         padding: 15px;
-        width: 60%;
-        height: 10%;
-        background: #FFF;
+        width: 45%;
+        margin-left: 3%;
+        background: #0A3871;
+        color: #FFF;
         border-radius: 17px;
         border-color: #0A3871;
         border-style: solid;
         border-width: 1px;
-        position: relative;
-        display: none;
         transition: 100ms;
-        box-shadow: 0 6px 0 #b6b6b6;
+        box-shadow: 0 6px 0 #626c77;
     }
     
-    #copiar:hover{
-        cursor: pointer;
-    }
-    
-    #copiar:active{
+    #btn-encriptar:active{
         transform: translateY(6px);
         box-shadow: 0 0 0;
     }
     
-    /*BOTONES IZQUIERDOS*/
-    
-    .left-button{
-        width: 90%;
-        height: 15%;
-        margin: 300px 3px 0;
-        border-radius: 24px;
-        position:absolute;
-    }
-    
-    .advertencia p{
-        font-size: 12px;
-        height: 20px;
-    }
-    
-    #exclamation{
-        float: left;
-        margin: 0 10px 4px;
-    }
-
-    .botones{
-        position: absolute;
-        display: block;
-        height: 150px;
-    }
-    
-    #btn-encriptar{
-        padding: 15px;
-        width: 150%;
-        border-radius: 17px;
-        margin-left: 1%;
-        background: #0A3871;
-        color: #FFF;
-        border-color: #0A3871;
-        border-style: solid;
-        border-width: 1px;
-        transition: 100ms;
-        box-shadow: 0 7px 0 #000000;
-    }
-    
-    #btn-encriptar:hover{
-        cursor: pointer;
-    }
-    
-    #btn-encriptar:active{
-        transform: translateY(7px);
-        box-shadow: 0 0 0;
-    }
-    
     #btn-desencriptar{
+        top:90%;
         padding: 15px;
-        width: 150%;
-        border-radius: 17px;
-        margin-left: 1%;
+        width: 45%;
+        margin-left: 2%;
         background: #D8DFE8;
         color: #0A3871;
+        border-radius: 17px;
         border-color: #0A3871;
         border-style: solid;
         border-width: 1px;
@@ -498,35 +465,131 @@ footer p{
         box-shadow: 0 6px 0 #6b6f73;
     }
     
-    #btn-desencriptar:hover{
-        cursor: pointer;
-    }
-    
     #btn-desencriptar:active{
         transform: translateY(6px);
+        box-shadow: 0 0 0;
+    }
+    
+    /*LADO DERECHO*/
+    
+    .right{
+        top:60%;
+        width: 80%;
+        left:0;
+        height: 33%;
+        margin: 2% 10%;
+        padding: 0;
+        border-radius: 24px;
+        position: absolute;
+        background: inherit;
+        transition: 500ms;
+        box-shadow: 2px 2px 10px 5px #0A3871;
+    }
+
+    .right:hover{
+        width:80%;
+        height: 33%;
+        padding-left: 0; 
+    }
+        
+    .mover-3elementos{
+        top:5%;
+        width: 100%;
+        height: 90%;
+        display: block;
+        position: absolute;
+    }
+    
+    #muñeco{
+        margin: 5% 6%;
+        width: 88%;
+        display: none;
+    }
+    
+    #texto-encontrado{
+        width: 90%;
+        height: 20%;
+        margin: 5% 6%;
+        text-align: center;
+        font-size: 20px;
+        font-weight:600;
+    }
+    
+    #texto-ingresado{
+        margin: 0;
+        padding: 0; 
+        width: 100%;
+        height: 60%;
+        border: none;
+        outline: none;
+        color: #0A3871;
+        font-size: 13px;
+        font-weight: 200;
+        text-align: center;
+        background: inherit;
+        resize: none;
+    }
+    
+    #texto-ingresado-oculto{
+        margin: 4% 4%;
+        padding: 0; 
+        width: 90%;
+        height: 60%;
+        border-radius: 17px;
+        color: #0A3871;
+        font-size: 90%;
+        text-align: center;
+        background:inherit;
+        resize: none;
+        display: none;
+        position: absolute;
+    }
+    
+    #copiar{
+        top: 70%;
+        margin: 3% 14%;
+        padding: 0;
+        width: 70%;
+        height: 18%;
+        background: #D8DFE8;
+        border-radius: 15px;
+        border-color: #0A3871;
+        border-style: solid;
+        border-width: 1px;
+        position:absolute;
+        display: none;
+        transition: 50ms;
+        box-shadow: 0 5px 0 #b6b6b6;
+    }
+    
+    #copiar:active{
+        transform: translateY(5px);
         box-shadow: 0 0 0;
     }
     
     /*PIE DE PAGINA*/
     
     footer{
-        margin: 10% 0 0 ;
+        top: 89%;
         width: 100%;
-        height: 50px;
+        height: 10%;
+        padding-top: 8%;
+        position: absolute;
         text-align: center;
+        background: linear-gradient(#6483aa, #386ba9 ) ;
     }
     
     footer .LinkedIn{
-        width: 4%;
+        width: 5%;
     }
     
     footer .GitHub{
-        width: 4%;
+        width: 5%;
     }
     
     footer p{
         margin:0;
-        font-size: 12px;
-    }
-    
+        font-size: 10px;
+        font-weight:600;
+    }    
 }

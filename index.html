@@ -12,26 +12,26 @@
 </head>
 
 <body>
-
-    <div class="container">
-
+    <main class="container">
         <div class="logo">
-            <img class="logo-img" src="img/Vector.svg" alt="logo de la página">
+            <a href="index.html"><img class="logo-img" src="img/Vector.svg" alt="logo de la página"></a>  
         </div>
-
+        
         <div class="left">  
             <textarea id="input-texto" class="text-input" placeholder="Ingrese el texto aquí"></textarea>
         </div>
 
         <div class="right">
-            <img id="muñeco" src="img/Muñeco.svg" alt="Persona examinando diamante con una lupa">
-            <h2 id="texto-encontrado">Ningún mensaje fue encontrado</h2>
-            <textarea id="texto-ingresado" class="ingresado-texto">Ingresa el texto que desees encriptar o desencriptar</textarea>
+            <div class="mover-3elementos">
+                <img id="muñeco" src="img/Muñeco.svg" alt="Persona examinando diamante con una lupa">
+                <h2 id="texto-encontrado">Ningún mensaje fue encontrado</h2>
+                <textarea id="texto-ingresado" class="ingresado-texto">Ingresa el texto que desees encriptar o desencriptar</textarea>
+            </div>
             <textarea id="texto-ingresado-oculto"></textarea>
             <button id="copiar" type="button" name="button" onclick="copiar()">Copiar</button>
         </div>
 
-        <section class="left-button">
+        <section class="left-buttons">
             <div class="advertencia">
                 <img id="exclamation" src="img/exclamation.svg" alt="signo de exclamación"><p>Sólo letras minúsculas y sin acentos</p>
             </div>
@@ -40,11 +40,11 @@
                 <button id="btn-desencriptar" type="button" onclick="decodificar()">Desencriptar</button>
             </div>
         </section>
- 
-    </div>
+
+    </main>
 
     <footer>
-        <a href="https://www.linkedin.com/in/christian-arias-developer/" target="_blank"><img class="LinkedIn" src="img/linkedin.svg" alt="contacto LinkedIn" ></a>
+        <a href="https://www.linkedin.com/in/christian-arias-developer/" target="_blank"><img class="LinkedIn" src="img/linkedin-dark.svg" alt="contacto LinkedIn" ></a>
         <a href="https://github.com/JHBrenner" target="_blank"><img class="GitHub" src="img/github.svg" alt="contacto GitHub" ></a>
         <p>Christian Alan Arias Mérida</p>
         <p>&copy; Copyright J.H.Brenner - 2022 - Todos los derechos reservados</p>
