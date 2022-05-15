@@ -6,7 +6,7 @@ body{
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background: #E5E5E5;
+    background: #FFF5FF;
 }
 
 input{
@@ -22,11 +22,11 @@ button{
 }
 
 .container{
-    margin: 0;
+    margin: 0 15%;
     position: absolute;
-    width: 100%;
-    height: 90%;
-    background: linear-gradient(#E5E5E5, #6483aa) ;
+    width: 70%;
+    height: 100%;
+    background: #FFF5FF;
 }
 
 /*LOGO*/
@@ -35,15 +35,17 @@ button{
     width: 3%;
     position: absolute;
     margin:0;
-    top: 4%;
-    left:4%;
+    top: 3%;
+    left:10%;
 }
 
 .logo-img{
-    transition:100ms;
     width: 50%;
     transition: 100ms;
-    filter:drop-shadow(0px 4px 0px #8c8c8c )
+    filter: brightness(0) saturate(100%) invert(15%) 
+            sepia(88%) saturate(3185%) hue-rotate(213deg)
+            brightness(79%) contrast(117%) 
+            drop-shadow(0px 4px 0px #91a8ed);
 }
 
 .logo:active{
@@ -53,96 +55,112 @@ button{
 
 /*LADO IZQUIERDO*/
 
-.left{
-    top:20%;
-    left: 11%;
-    width: 50%;
-    height: 50%;
+.left-buttons{
+    top: 10%;
+    left: 16%;
+    width: 55%;
+    height: 90%;
+    margin: 0;
+    border-radius: 24px;
+    position:absolute;
+}
+
+.ingrese-texto{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
     position: absolute;
 }
 
-.text-input{
-    width: 96%;
-    height: 90%;
-    margin: 1%;
-    color: #0A3871;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    background: inherit;
+#input-texto{
+    top:0;
+    position: absolute;
+    width: 93%;
+    height: 85%;
+    padding: 5%;
+    margin: 0;
+    border-radius: 24px;
+    border:none;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px 1px rgb(145 168 237 / 10%),
+    15px 15px 25px 6px rgb(145 168 237 / 20%),
+    30px 30px 50px 12px rgb(145 168 237 / 30%);
+    transition: 500ms;
+    color: #002E99;
+    resize: none;
+    font-size: 120%;
 }
 
-.text-input:focus::-webkit-input-placeholder {
-    transition: text-indent 500ms 500ms ease; 
-    text-indent: -100%;
-    opacity: 1;
-  }
-
-#input-texto{
-    color: #0A3871;
-    padding: 1%;
-    font-size: 15px;
-    resize: none;
+#input-texto:hover{
+    width: 94%;
+    height: 86%;
 }
 
 #input-texto::placeholder{
-    font-size: 25px;
-    color:#0A3871;
+    font-size: 150%;
+    color: #002E99;
 }
+
+#input-texto:focus::-webkit-input-placeholder {
+    transition: text-indent 500ms 500ms ease; 
+    text-indent: -100%;
+    opacity: 1;
+} 
 
 /*BOTONES IZQUIERDOS*/
 
-.left-buttons{
-    top: 80%;
-    left: 10%;
-    margin: 1% 0;
-    width: 60%;
-    height: 13%;
-    border-radius: 24px;
-    position:absolute;
-    display: block;
+.advertencia{
+    top:74%;
+    left: 8%;
+    width:100%;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
 }
 
 #exclamation{
-    left: 40%;
-    margin-right: 1%;
-    margin-left:2%;
-    margin-bottom:1%;
+    margin: 2% 1% 2% 0;
+    display: inline-block;
+    filter: brightness(0) saturate(100%) invert(15%) 
+            sepia(88%) saturate(3185%) hue-rotate(213deg)
+            brightness(79%) contrast(117%);
 }
 
 .advertencia p{
-    font-size: 75%;
-    font-weight: bold;
-    width:50%;
-    height: 17%;
-    margin: 0 0;
+    margin: 2.3% 0 2%;
+    width:85%;
     position: absolute;
-    display:inline-block;
+    display: inline-block;
+    color: #002E99;
+    font-size: 70%;
 }
 
 .botones{
-    top:30%;
-    left:0.1%;
-    width: 80%;
-    height: 50%;
+    top:83%;
+    width: 100%;
+    height: 15%;
     margin: 0;
+    padding: 0;
     position: absolute;
-    display: inline-block;
 }
 
 #btn-encriptar{
-    top: 97%;
-    padding: 15px;
-    width: 40%;
-    margin-left: 1%;
-    background: #0A3871;
+    left:8%;
+    margin: 0;
+    padding: 1%;
+    width:38%;
+    height: 50%;
+    position: absolute;
+    background: #002E99;
     color: #FFF;
-    border-radius: 17px;
-    border-color: #0A3871;
-    border-style: solid;
-    border-width: 1px;
+    border-radius: 15px;
+    border: 2px solid #91a8ed;
+    font-weight:bold;
+    font-size: 80%;
     transition: 100ms;
-    box-shadow: 0 6px 0 #626c77;
+    box-shadow: 0 6px 0 #91a8ed;
 }
 
 #btn-encriptar:hover{
@@ -155,18 +173,19 @@ button{
 }
 
 #btn-desencriptar{
-    top:90%;
-    padding: 15px;
-    width: 40%;
-    margin-left: 2%;
-    background: #D8DFE8;
-    color: #0A3871;
-    border-radius: 17px;
-    border-color: #0A3871;
-    border-style: solid;
-    border-width: 1px;
+    left:48%;
+    padding: 1%;
+    width:38%;
+    height: 50%;
+    position: absolute;
+    background:  #FAF8FF;
+    color: #002E99;;
+    border-radius: 15px;
+    border: 2px solid #91a8ed;
+    font-weight:bold;
+    font-size: 80%;
     transition: 100ms;
-    box-shadow: 0 6px 0 #6b6f73;
+    box-shadow: 0 6px 0 #91a8ed;
 }
 
 #btn-desencriptar:hover{
@@ -181,89 +200,92 @@ button{
 /*LADO DERECHO*/
 
 .right{
-    width: 18%;
-    height: 90%;
-    margin: 2%;
-    padding: 0;
+    top:10%;
+    left: 72%;
+    width: 25%;
+    height: 85%;
+    margin: 0;
     border-radius: 24px;
-    left: 70%;
     position: absolute;
     background: #FFF;
     transition: 500ms;
-    box-shadow: 2px 2px 10px 5px #0A3871;
+     box-shadow: 10px 10px 20px 1px rgb(145 168 237 / 10%),
+                    15px 15px 25px 6px rgb(145 168 237 / 20%),
+                    30px 30px 50px 12px rgb(145 168 237 / 30%);
 }
 
 .right:hover{
-    width:19%;
-    height: 91%;
-    padding-left: 0.5%
+    width:26%;
+    height: 86%;
 }
 
 .mover-3elementos{
-    top:24%;
+    width: 100%;
+    height: 100%;
     display: block;
     position: absolute;
 }
 
 #muñeco{
-    margin: 5% 6%;
-    width: 88%;
+    margin: 45% 10% 0;
+    width: 80%;
+    height: 40%;
+    
 }
 
 #texto-encontrado{
-    width: 88%;
-    margin: 5% 6%;
+    width: 70%;
+    margin: 0 15%;
+    height: 10%;
     text-align: center;
-    font-size: 98%;
+    color: #002E99;
+    font-size: 110%;
     font-weight:bolder;
 }
 
 #texto-ingresado{
-    margin: 5% 6%;
+    margin: 0 10%;
     padding: 0; 
-    width: 88%;
-    height: 20%;
+    width: 80%;
+    height: 7%;
     border: none;
-    outline: none;
-    color: #0A3871;
-    font-size: 74%;
-    font-weight: bold;
+    color: #002E99;
+    font-size: 80%;
     text-align: center;
     background: #FFF;
     resize: none;
 }
 
 #texto-ingresado-oculto{
-    margin: 4% 4%;
-    padding: 0; 
-    width: 90%;
-    height: 85%;
+    margin: 0;
+    padding: 5%; 
+    width: 100%;
+    height: 90%;
     border: none;
+    border-radius: 15px;
     outline: none;
-    color: #0A3871;
-    font-size: 74%;
+    color: #002E99;
+    font-size: 80%;
     text-align: center;
     background: #FFF;
     resize: none;
     display: none;
-    position: absolute;
 }
 
 #copiar{
-    top: 90%;
-    margin: 0 14%;
+    margin:0 20%;
     padding: 0;
-    width: 70%;
-    height: 6%;
-    background: #FFF;
+    width: 60%;
+    height: 7%;
+    background: #FAF8FF;
     border-radius: 15px;
-    border-color: #0A3871;
-    border-style: solid;
-    border-width: 1px;
-    position:absolute;
+    border: 2px solid #91a8ed;
+    color: #002E99;
+    font-size: 80%;
+    font-weight: bold;
     display: none;
     transition: 100ms;
-    box-shadow: 0 6px 0 #b6b6b6;
+    box-shadow: 0 6px 0 #91a8ed;
 }
 
 #copiar:hover{
@@ -278,29 +300,96 @@ button{
 /*PIE DE PAGINA*/
 
 footer{
-    top: 90%;
+    top: 120%;
     width: 100%;
-    height: 10%;
-    padding-top: 2.5%;
+    height: 25%;
     position: absolute;
-    text-align: center;
-    background: linear-gradient(#6483aa, #386ba9 ) ;
+    font-family: 'Inter', sans-serif;
+    background: #FFF5FF;
 }
 
-footer .LinkedIn{
-    width: 1.2%;
+footer h2{
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-size: 100%;
+    color:#002E99
+}
+footer label{
+    font-size: 80%;
+    color: #002E99;
 }
 
-footer .GitHub{
-    width: 1.2%;
+.container-footer{
+    margin-right: 35%;
+    margin-left: 26%;
+    width:40%;
+    height: 100%;
+    position: absolute;
 }
 
-footer p{
-    margin:0;
-    font-size: 12px;
-    font-weight:600;
+.columna1{
+    top:0;
+    left: 0;
+    width: 40%;
+    height: 80%;
+    margin: 0;
+    position: absolute;
 }
 
+.fila1{
+    display: flex;
+    margin-top: 2%;
+}
+
+.fila1 a{
+    width:7%;
+}
+
+.fila1 img{
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(15%) 
+            sepia(88%) saturate(3185%) hue-rotate(213deg)
+            brightness(79%) contrast(117%);
+}
+
+.fila1 label{
+    margin-left: 3%;
+    height: 100%;
+}
+
+.columna2{
+    top:0;
+    left: 40%;
+    width: 60%;
+    height: 80%;
+    margin: 0;
+    position: absolute;
+}
+
+.fila2{
+    margin-top: 2%;
+    display: flex;
+}
+
+.fila2 img{
+    width: 5%;  
+    filter: brightness(0) saturate(100%) invert(15%) 
+            sepia(88%) saturate(3185%) hue-rotate(213deg)
+            brightness(79%) contrast(117%);
+}
+
+.fila2 label{
+    margin-left: 3%;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.fondo{
+    top: 75%;
+    width:100%;
+    height: 20%;
+    position: absolute;
+}
 
 /*RESPONSIVE PARA CELULAR*/
 
@@ -314,7 +403,6 @@ footer p{
         font-family: 'Inter', sans-serif;
         margin: 0;
         padding: 0;
-        background: #E5E5E5;
     }
     
     input{
@@ -333,8 +421,8 @@ footer p{
         margin: 0;
         position: absolute;
         width: 100%;
-        height: 90%;
-        background: linear-gradient(#E5E5E5, #6483aa);
+        height: 1000px;
+        background: #FFF5FF;
     }
     
     /*LOGO*/
@@ -343,7 +431,7 @@ footer p{
         width: 8%;
         position: absolute;
         margin:0;
-        top: 4%;
+        top: 1%;
         left:4%;
     }
     
@@ -351,7 +439,9 @@ footer p{
         transition:100ms;
         width: 50%;
         transition: 100ms;
-        filter:drop-shadow(0px 4px 0px #8c8c8c )
+        filter: brightness(0) saturate(100%) invert(15%) 
+        sepia(88%) saturate(3185%) hue-rotate(213deg)
+        brightness(79%) contrast(117%) drop-shadow(0px 4px 0px #91a8ed);
     }
     
     .logo:active{
@@ -360,102 +450,122 @@ footer p{
     }
     
     /*LADO IZQUIERDO*/
-    
-    .left{
-        top:10%;
-        margin: 3% 0;
-        left: 11%;
-        width: 80%;
-        height: 18%;
-        position: absolute;
-    }
-    
-    .text-input{
-        width: 96%;
-        height: 90%;
-        margin: 1%;
-        color: #0A3871;
-        font-size: 20px;
-        border: none;
-        outline: none;
-        background: inherit;
-    }
-    
-    .text-input:focus::-webkit-input-placeholder {
-        transition: text-indent 500ms 500ms ease; 
-        text-indent: -100%;
-        opacity: 1;
-      }
-    
-    #input-texto{
-        color: #0A3871;
-        padding: 1%;
-        font-size: 15px;
-        resize: none;
-    }
-    
-    #input-texto::placeholder{
-        font-size: 25px;
-        color:#0A3871;
-    }
-    
-    /*BOTONES IZQUIERDOS*/
-    
+
     .left-buttons{
-        top: 31%;
-        left: 10%;
-        margin: 3% 0;
+        top: 35px;
+        left:0;
+        margin: 3% 10%;
         width: 80%;
-        height: 24%;
+        height: 435px;
         border-radius: 24px;
         position:absolute;
         display: inline;
     }
     
-    #exclamation{
-        left: 40%;
-        margin-right: 1%;
-        margin-left:2%;
-        margin-bottom:1%;
+    .ingrese-texto{
+        top:0;
+        left:0;
+        margin: 0;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        border-radius: 24px;
+        background: inherit;
+        box-shadow: 10px 10px 20px 1px rgb(145 168 237 / 10%),
+                    15px 15px 25px 6px rgb(145 168 237 / 20%),
+                    30px 30px 50px 12px rgb(145 168 237 / 30%);
     }
     
+    #input-texto{
+        top:0;
+        width: 100%;
+        height: 100%;
+        padding: 10%;
+        margin: 0;
+        border: none;
+        border-radius: 24px;
+        background:#FFFFFF;
+        font-size: 25px;
+        color:#002E99;
+        resize: none;
+        box-shadow: none;
+    }    
+    
+    #input-texto:focus::-webkit-input-placeholder {
+        transition: text-indent 500ms 500ms ease; 
+        text-indent: -150%;
+        opacity: 1;
+    }
+
+    #input-texto:hover{
+        width: 100%;
+        height: 100%; 
+    }
+    
+    #input-texto::placeholder{
+        font-size: 30px;
+        color: #002E99;
+    }
+    
+    /*BOTONES IZQUIERDOS*/
+    
     .advertencia{
-        margin: 3% 0;
+        top:325px;
+        left:0;
+        margin:0;
+        width: 100%;
+        height: 30px;
+        position: absolute;
+    }
+    
+    #exclamation{
+        left:0;
+        margin-right: 1%;
+        margin-left:2%;
+        position: absolute;
+        filter: brightness(0) saturate(100%) invert(15%) 
+                sepia(88%) saturate(3185%) hue-rotate(213deg)
+                brightness(79%) contrast(117%);
     }
 
     .advertencia p{
+        left:8%;
+        width:85%;
+        height: 60%;
+        margin: 2% 2%;
+        position: absolute;
         font-size: 70%;
         font-weight: 100;
-        width:85%;
-        height: 17%;
-        margin: 0 0;
-        position: absolute;
-        display:inline-block;
+        color: #002E99;
     }
     
     .botones{
-        top:37%;
+        top:370px;
         left:0.1%;
         width: 100%;
-        height: 50%;
-        margin: 3% 0;
+        height: 80px;
+        margin: 0;
         position: absolute;
         display: inline-block;
+        border-radius: 24px;
     }
     
     #btn-encriptar{
-        top: 97%;
-        padding: 15px;
-        width: 45%;
-        margin-left: 3%;
-        background: #0A3871;
+        top: 0;
+        left: 0;
+        width: 49%;
+        height: 70%;
+        padding: 5%;
+        margin:0;
+        background: #002E99;
         color: #FFF;
+        font-weight: bold;
         border-radius: 17px;
-        border-color: #0A3871;
+        border-color: #91a8ed;
         border-style: solid;
         border-width: 1px;
         transition: 100ms;
-        box-shadow: 0 6px 0 #626c77;
+        box-shadow: 0 6px 0 #91a8ed;
     }
     
     #btn-encriptar:active{
@@ -464,18 +574,21 @@ footer p{
     }
     
     #btn-desencriptar{
-        top:90%;
-        padding: 15px;
-        width: 45%;
-        margin-left: 2%;
-        background: #D8DFE8;
-        color: #0A3871;
+        top: 0;
+        left:51%;
+        width: 49%;
+        height: 70%;
+        padding: 5%;
+        margin:0;
+        background: #FAF8FF;
+        color: #002E99;
+        font-weight: bold;
         border-radius: 17px;
-        border-color: #0A3871;
+        border-color: #91a8ed;
         border-style: solid;
         border-width: 1px;
         transition: 100ms;
-        box-shadow: 0 6px 0 #6b6f73;
+        box-shadow: 0 6px 0 #91a8ed;
     }
     
     #btn-desencriptar:active{
@@ -486,31 +599,34 @@ footer p{
     /*LADO DERECHO*/
     
     .right{
-        top:59%;
+        top:495px;
         width: 80%;
         left:0;
-        height: 33%;
+        height: 300px;
         margin: 3% 10%;
         padding: 0;
         border-radius: 24px;
         position: absolute;
-        background: inherit;
+        background: #FFFFFF;
         transition: 500ms;
-        box-shadow: 2px 2px 10px 5px #0A3871;
+        box-shadow: 10px 10px 20px 1px rgb(145 168 237 / 10%),
+                    15px 15px 25px 6px rgb(145 168 237 / 20%),
+                    30px 30px 50px 12px rgb(145 168 237 / 30%);
     }
 
     .right:hover{
         width:80%;
-        height: 34%;
-        padding-left: 0; 
+        height: 300px;
+        padding-left: 0;
     }
         
     .mover-3elementos{
-        top:5%;
+        top:0;
         width: 100%;
-        height: 90%;
+        height: 100%;
         display: block;
         position: absolute;
+        border-radius: 24px;
     }
     
     #muñeco{
@@ -520,90 +636,170 @@ footer p{
     }
     
     #texto-encontrado{
-        width: 90%;
-        height: 20%;
-        margin: 5% 6%;
+        width: 100%;
+        height: 120px;
+        margin:0;
+        padding:20% 10% 0;
         text-align: center;
-        font-size: 1.2em;
-        font-weight:600;
+        font-size: 25px;
+        font-weight:bold;
+        color: #002E99;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
     }
     
     #texto-ingresado{
-        margin: 0 5%;
-        padding: 5% 0; 
-        width: 90%;
-        height: 60%;
+        width: 100%;
+        height: 180px;
+        margin: 0;
+        padding: 15% 10% 0; 
         border: none;
-        outline: none;
-        color: #0A3871;
-        font-size: 85%;
-        font-weight: 200;
+        color: #002E99;
+        font-size: 15px;
+        font-weight: lighter;
         text-align: center;
         background: inherit;
         resize: none;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
     }
     
     #texto-ingresado-oculto{
-        margin: 0 5%;
-        padding: 5% 0; 
-        width: 90%;
-        height: 60%;
-        border: none;
-        outline: none;
-        color: #0A3871;
-        font-size: 85%;
-        font-weight: 200;
-        text-align: center;
+        margin: 0;
+        padding: 10%; 
+        width: 100%;
+        height: 220px;
+        color: #002E99;
+        font-size: 25px;
+        font-weight:lighter;
+        text-align: left;
         background: inherit;
         resize: none;
         display: none;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
     }
     
     #copiar{
-        top: 60%;
-        margin: 3% 14%;
+        top: 220px;
+        margin: 5% 20%;
         padding: 0;
-        width: 70%;
-        height: 18%;
-        background: #D8DFE8;
+        width: 60%;
+        height: 15%;
+        color:#002E99;
+        background: #FAF8FF;
         border-radius: 15px;
-        border-color: #0A3871;
+        border-color: #91a8ed;
         border-style: solid;
         border-width: 1px;
         position: absolute;
+        transition: 5ms;
+        box-shadow: 0 6px 0 #91a8ed;
         display: none;
-        transition: 50ms;
-        box-shadow: 0 5px 0 #b6b6b6;
     }
     
     #copiar:active{
-        transform: translateY(5px);
+        transform: translateY(6px);
         box-shadow: 0 0 0;
     }
     
     /*PIE DE PAGINA*/
     
     footer{
-        top: 88%;
+        top: 1000px;
         width: 100%;
-        height:40%; /*10%;*/
-        padding: 10% 2% 3% 2%;
+        height: 180px;
+        padding:0;
         position: absolute;
-        text-align: center;
-        background: linear-gradient(#6483aa, #386ba9 ) ;
+        font-family: 'Inter', sans-serif;
+        background:#FFF5FF;
     }
     
-    footer .LinkedIn{
-        width: 5%;
+    footer h2{
+        margin-top: 2%;
+        margin-bottom: 10%;
+        font-size: 100%;
+        color:#002E99
+    }
+    footer label{
+        font-size: 80%;
+        color: #002E99;
     }
     
-    footer .GitHub{
-        width: 5%;
+    .container-footer{
+        margin: 0;
+        width:100%;
+        height: 100%;
+        position: absolute;
     }
     
-    footer p{
-        margin:0;
-        font-size: 10px;
-        font-weight:600;
-    }    
+    .columna1{
+        top:0;
+        left: 5%;
+        width: 35%;
+        height: 70%;
+        margin: 0;
+        position: absolute;
+    }
+    
+    .fila1{
+        display: flex;
+        margin-top: 2%;
+    }
+    
+    .fila1 a{
+        width: 10%;
+    }
+    
+    .fila1 img{
+        width: 100%;
+        filter: brightness(0) saturate(100%) invert(15%) 
+                sepia(88%) saturate(3185%) hue-rotate(213deg)
+                brightness(79%) contrast(117%);
+    }
+    
+    .fila1 label{
+        margin-left: 3%;
+        height: 100%;
+    }
+    
+    .columna2{
+        top:0;
+        left: 45%;
+        width: 55%;
+        height: 70%;
+        margin: 0;
+        position: absolute;
+    }
+    
+    .fila2{
+        margin-top: 2%;
+        display: flex;
+    }
+    
+    .fila2 img{
+        width: 7%;  
+        filter: brightness(0) saturate(100%) invert(15%) 
+                sepia(88%) saturate(3185%) hue-rotate(213deg)
+                brightness(79%) contrast(117%);
+    }
+    
+    .fila2 label{
+        margin-left: 3%;
+        margin-bottom: 0;
+        height: 100%;
+    }
+    
+    .fondo{
+        top: 80%;
+        padding: 0 5%;
+        width:100%;
+        height: 20%;
+        position: absolute;
+        font-size: 75%;
+    }
+
+    .fondo label{
+        width: 100%;
+    }
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/Vector.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -13,41 +14,76 @@
 
 <body>
     <main class="container">
+
         <div class="logo">
             <a href="index.html"><img class="logo-img" src="img/Vector.svg" alt="logo de la página"></a>  
         </div>
         
-        <div class="left">  
-            <textarea id="input-texto" class="text-input" placeholder="Ingrese el texto aquí"></textarea>
-        </div>
-
-        <div class="right">
-            <div class="mover-3elementos">
-                <img id="muñeco" src="img/Muñeco.svg" alt="Persona examinando diamante con una lupa">
-                <h2 id="texto-encontrado">Ningún mensaje fue encontrado</h2>
-                <textarea id="texto-ingresado" class="ingresado-texto">Ingresa el texto que desees encriptar o desencriptar</textarea>
-            </div>
-            <textarea id="texto-ingresado-oculto"></textarea>
-            <button id="copiar" type="button" name="button" onclick="copiar()">Copiar</button>
-        </div>
-
         <section class="left-buttons">
+            <div class="ingrese-texto">  
+                <textarea id="input-texto" class="text-input" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+
             <div class="advertencia">
                 <img id="exclamation" src="img/exclamation.svg" alt="signo de exclamación"><p>Sólo letras minúsculas y sin acentos</p>
             </div>
+
             <div class="botones">
                 <button id="btn-encriptar" type="button" onclick="codificar()">Encriptar</button>
                 <button id="btn-desencriptar" type="button" onclick="decodificar()">Desencriptar</button>
             </div>
         </section>
 
+        <section class="right">
+            <div class="mover-3elementos">
+                <img id="muñeco" src="img/Muñeco.svg" alt="Persona examinando diamante con una lupa">
+                <h2 id="texto-encontrado">Ningún mensaje fue encontrado</h2>
+                <textarea id="texto-ingresado" class="ingresado-texto">Ingresa el texto que desees encriptar o desencriptar</textarea>
+                <textarea id="texto-ingresado-oculto"></textarea>
+                <button id="copiar" type="button" name="button" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
-        <a href="https://www.linkedin.com/in/christian-arias-developer/" target="_blank"><img class="LinkedIn" src="img/linkedin-dark.svg" alt="contacto LinkedIn" ></a>
-        <a href="https://github.com/JHBrenner" target="_blank"><img class="GitHub" src="img/github.svg" alt="contacto GitHub" ></a>
-        <p>Christian Alan Arias Mérida</p>
-        <p>&copy; Copyright J.H.Brenner - 2022 - Todos los derechos reservados</p>
+        <section class="container-footer">
+            <div class="columna1">
+                <h2>Redes Sociales </h2>
+                <div class="fila1">
+                    <a href="https://www.linkedin.com/in/christian-arias-developer/" target="_blank"><img src="img/linkedin.svg" alt="contacto LinkedIn" ></a>
+                    <label>Sígueme en LinkedIn</label>
+                </div>
+                
+                <div class="fila1">
+                    <a href="https://github.com/JHBrenner" target="_blank"><img src="img/github.svg" alt="contacto GitHub" ></a>
+                    <label>Sígueme en GitHub</label>
+                </div>
+                
+            </div>
+
+            <div class="columna2">
+                <h2>Contacto</h2>
+                <div class="fila2">
+                    <img src="img/ubicación.svg" alt="dirección">
+                    <label>Sur 16 #124, Agrícola Oriental, Iztacalco, CDMX</label>
+                </div>
+
+                <div class="fila2">
+                    <img src="img/celular.svg" alt="Número de celular">
+                    <label>(+52) 55 6917 5322</label>
+                </div>
+
+                <div class="fila2">
+                    <img src="img/mail.svg" alt="correo electrónico">
+                    <label>kazikli_bey@live.com.mx</label>
+                </div>
+            </div>
+
+            <div class="fondo">
+                <label>&copy; 2022 Todos los derechos reservados | Christian Arias (JHBrenner)</label>
+            </div>
+        </section>
     </footer>
    
     <script type="text/javascript" src="script.js"></script>
